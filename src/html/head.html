@@ -1,0 +1,76 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favikon.png" type="image/png">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/terms.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="files/jquery.min.js"></script>
+    <title>@@title</title>
+
+    <script>
+        var utm_campaign,
+            utm_source,
+            utm_medium,
+            utm_term,
+            utm_content;
+        let params = window
+            .location
+            .search
+            .replace('?', '')
+            .split('&')
+            .reduce(
+                function (p, e) {
+                    var a = e.split('=');
+                    p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+                    return p;
+                }, {}
+            );
+        // let fpxl = params['fpxl'];
+        $.each(params, function (key, value) {
+            if (key == "utm_campaign") {
+                utm_campaign = params['utm_campaign'];
+            }
+            if (key == "utm_source") {
+                utm_source = params['utm_source'];
+            }
+            if (key == "utm_medium") {
+                utm_medium = params['utm_medium'];
+            }
+            if (key == "utm_term") {
+                utm_term = params['utm_term'];
+            }
+            if (key == "utm_content") {
+                utm_content = params['utm_content'];
+            }
+        });
+        $(document).ready(function () {
+            // $('input[name=fpxl]').val(fpxl);
+            $('input[name=utm_campaign]').val(utm_campaign);
+            $('input[name=utm_source]').val(utm_source);
+            $('input[name=utm_medium]').val(utm_medium);
+            $('input[name=utm_term]').val(utm_term);
+            $('input[name=utm_content]').val(utm_content);
+        });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7TKXMB');
+    </script>
+    <!-- End Google Tag Manager --> 
+</head>

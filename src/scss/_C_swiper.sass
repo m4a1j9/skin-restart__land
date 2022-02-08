@@ -1,0 +1,49 @@
+.contact
+    // display: flex
+    @include adaptiv-value('width',1100,300,1)
+    // margin-top: 25px
+    // flex-direction: column
+    // align-items: center
+    min-width: 0
+    .swiper-container
+        //@include adaptiv-value('width',500,310,1)
+        width: 100%
+        @include adaptiv-value('min-height',350,626,1)
+        overflow: hidden
+
+        position: relative
+        .swiper-wrapper
+            width: 100%
+            height: 350px
+            .swiper-slide
+                width: 100%
+                height: 350px
+                display: flex
+                .swiper-slide__autor-av
+                    width: 100px
+                    height: 100px
+                    @include adaptiv-value('margin-right',40,10,1)
+                .autor1
+                    background: url('../img/logo.png') 0 0/cover no-repeat
+                .autor2
+                    background: url('../img/logo.png') 0 0/cover no-repeat
+                .autor3
+                    background: url('../img/logo.png') 0 0/cover no-repeat
+                .autor4
+                    background: url('../img/logo.png') 0 0/cover no-repeat
+                .autor5
+                    background: url('../img/logo.png') 0 0/cover no-repeat
+                .autor6
+                    background: url('../img/logo.png') 0 0/cover no-repeat
+                .swiper-slide__main-text
+                    @include adaptiv-value('width',360,200,1)
+                    font-weight: normal
+                    font-size: 16px
+                    line-height: 28px
+                    span
+                        display: block
+                        font-weight: bold
+                        margin-top: 15px
+        .swiper-pagination
+            display: flex
+            align-items: start

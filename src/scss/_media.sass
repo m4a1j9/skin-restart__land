@@ -1,0 +1,76 @@
+@media ( max-width: 1217px )
+    .border-wrap
+        width: 100vw
+
+        border-left: none
+        border-right: none
+@media ( max-width: 1200px )
+    .content
+        .content__img-list-container
+            flex-direction: column
+
+        .img-list-container-2
+            flex-direction: column-reverse
+            gap: 20px
+            .content__list
+                padding: 0
+
+            width: auto
+            .content__img-container
+                display: flex
+                flex-direction: row
+                margin: 0
+
+        .img-list-container-3
+            .content__list
+                @include adaptiv-value('padding-right',0,10,1)
+                @include adaptiv-value('padding-left',0,10,1)
+
+        .swiper-container._MB
+            display: block
+        .swiper-container._PC
+            display: none
+
+        .content__reasons
+            // width: 700px
+            flex-direction: column
+            align-items: start
+            gap: 20px
+
+            .content__reason-item
+                width: auto
+                height: auto
+                .content__reason-text
+                    margin-top: 10px
+                br
+                    display: none
+        
+        .t3
+            display: flex
+            flex-direction: column
+
+@media ( max-width: 540px )
+    .content
+
+        .content__img-list-container
+
+            .cont-img4
+                width: 100vw
+                @include adaptiv-value('height',570,160,1)
+
+        .img-list-container-2
+
+            @include adaptiv-value('margin-top',20,10,1)
+
+            width: auto
+
+            .content__img-container
+                display: flex
+                flex-direction: column
+
+@media ( max-width: 450px )
+    .content
+        .content__reasons
+            flex-direction: column
+            align-self: flex-start
+
